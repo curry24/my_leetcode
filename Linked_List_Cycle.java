@@ -33,7 +33,7 @@ public class Linked_List_Cycle {
 //	但实际上快指针也在追慢指针，希望能超慢指针一圈。
 //	他们在这个跑道上，总会有一天快指针追上了慢指针。
 //	我们不用担心快指针跳过了慢指针，因为他们两的速度差是1，
-//	所以她们俩在环上的距离总是每次减1，最后总能减到0。
+//	所以他们俩在环上的距离总是每次减1，最后总能减到0。
 	public boolean hasCycle(ListNode head){
 		if(head == null) return false;
 		ListNode fast = head;

@@ -15,29 +15,17 @@ public class Best_Time_to_Buy_and_Sell_Stock {
 		Best_Time_to_Buy_and_Sell_Stock m = new Best_Time_to_Buy_and_Sell_Stock();
 		
 		System.out.print(m.maxProfit(a));
-		}
+	}
 	
-//	 public int maxProfit(int[] prices) {
-//		 
-//		 if(prices==null||prices.length==0)
-//			 return 0;
-//		 
-//		 int local=0;
-//		 int global=0;
-//		 
-//		 for(int i=0;i<prices.length-1;i++){
-//			 
-//			 local = Math.max(local+prices[i+1]-prices[i], 0);
-//			 global = Math.max(global, local);
-//			 
-//		 }
-//		 
-//		 return global;
-//	        
-//	    }
 
+//	  动态规划的思想
+//	  需要遍历一次数组，用一个变量记录遍历过数中的最小值，
+//	  然后每次计算当前值和这个最小值之间的差值为当前的利润，
+//	  然后每次选较大的利润来更新。
+//	  当遍历完成后当前利润即为所求
 	 public int maxProfit(int[] prices) {
-	        int currentMin = Integer.MAX_VALUE;
+	        if(prices.length == 0) return 0;
+		 	int currentMin = Integer.MAX_VALUE;
 	        int bestProfit = 0;
 	        
 	        for (int i = 0; i < prices.length; i++) {
@@ -47,4 +35,6 @@ public class Best_Time_to_Buy_and_Sell_Stock {
 	        
 	        return bestProfit;
 	    }
+	 
+	 
 }
